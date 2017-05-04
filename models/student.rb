@@ -35,6 +35,13 @@ attr_reader :id, :first_name, :second_name, :house, :age
     return house.house_name
   end
 
+  def logo
+    sql = "SELECT * FROM houses h INNER JOIN students s ON h.id = s.house WHERE s.id = #{@id};"
+    returned_house = SqlRunner.run(sql).first
+    house = House.new(returned_house)
+    return house.logo()
+  end
+
   def Student.all()
     sql ="SELECT * FROM students;"
     returned_array = SqlRunner.run(sql)

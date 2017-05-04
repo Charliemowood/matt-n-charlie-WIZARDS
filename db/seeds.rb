@@ -10,22 +10,22 @@ House.delete_all()
 
 house1 = House.new({
   'house_name' => 'Gryffindor',
-  'logo' => './public/gryffindor.jpg'
+  'logo' => '/gryffindor.jpg'
 })
 
 house2 = House.new({
   'house_name' => 'Slytherin',
-  'logo' => './public/slytherin.jpg'
+  'logo' => '/slytherin.jpg'
 })
 
 house3 = House.new({
   'house_name' => 'Ravenclaw',
-  'logo' => './public/ravenclaw.jpg'
+  'logo' => '/ravenclaw.jpg'
 })
 
 house4 = House.new({
   'house_name' => 'Hufflepuff',
-  'logo' => './public/hufflepuff.jpg'
+  'logo' => '/hufflepuff.jpg'
 })
 
 house1.save()
